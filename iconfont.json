@@ -1,0 +1,149 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "25370557",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "25370558",
+      "name": "扫一扫",
+      "font_class": "saoyisao",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "25370559",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "25370560",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "25370561",
+      "name": "扫一扫2",
+      "font_class": "saoyisao2",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "25370562",
+      "name": "待评价",
+      "font_class": "daipingjia",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "25370563",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "25370564",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "25370565",
+      "name": "我的客服",
+      "font_class": "wodekefu",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "25370566",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "25370567",
+      "name": "关注店铺",
+      "font_class": "guanzhudianpu",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "25370568",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "25370569",
+      "name": "已完成",
+      "font_class": "yiwancheng",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "25370571",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "25370572",
+      "name": "退回售后",
+      "font_class": "tuihuishouhou",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "25370573",
+      "name": "银行卡",
+      "font_class": "yinhangka",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "25370574",
+      "name": "足迹",
+      "font_class": "zuji",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "25370575",
+      "name": "待支付",
+      "font_class": "daizhifu",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "25370576",
+      "name": "数据中心",
+      "font_class": "shujuzhongxin",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "25370690",
+      "name": "收藏夹",
+      "font_class": "shoucangjia",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    }
+  ]
+}
