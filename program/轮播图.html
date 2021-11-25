@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <base target="_blank" />
+    <link rel="icon" type="image/x-icon" href="头像.png">
+    <link rel="stylesheet" type="text/css" href="轮播图2.css">
+    <link rel="stylesheet" type="text/css" href="轮播图1.css">
+</head>
+
+<body>
+    <section class="pc-banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-center ">
+                    <a href="#"><img src="轮播图1.png"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="轮播图2.png"></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="轮播图3.png"></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="button">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+    <div class="describe">轮播图</div>
+
+    <script src="轮播图.js"></script>
+    <script>
+        window.onload = function() {
+            var swiper = new Swiper('.swiper-container', {
+                autoplay: 3000,
+                speed: 1000,
+                autoplayDisableOnInteraction: false,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: 2,
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                prevButton: '.swiper-button-prev',
+                nextButton: '.swiper-button-next',
+                onInit: function(swiper) {
+                    swiper.slides[2].className = "swiper-slide swiper-slide-active";
+                },
+                breakpoints: {
+                    668: {
+                        slidesPerView: 1,
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

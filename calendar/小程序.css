@@ -1,0 +1,40 @@
+.program {
+    display: block;
+    float: left;
+    width: 400px;
+    margin: 50px 30px 50px 30px;
+    height: 600px;
+}
+
+.prgtitle {
+    background-color: skyblue;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    height: 120px;
+    line-height: 120px;
+}
+
+.progpic1 {
+    background-image: url(小程序/计算器图.png);
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.progpic2 {
+    background-image: url(小程序/轮播图.png);
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.progpic3 {
+    background-image: url(小程序/交互.png);
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

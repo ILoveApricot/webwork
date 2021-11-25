@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【算法入门】深度优先搜索(DFS)</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/x-icon" href="../pictures/head.png">
+    <link rel="stylesheet" href="dfs.css">
+</head>
+
+<body>
+    <div class="homepage clearfix">
+        <div class="nav">
+            <a href="../index.html" class="nav_son1">首页</a>
+            <a href="../pages/anju.html" class="nav_son">杏树</a>
+            <a href="../pages/program.html" class="nav_son">小程序</a>
+            <a href="../pages/bcg.html" class="nav_son">背景</a>
+            <a href="../pages/alg.html" class="nav_son">算法入门</a>
+            <a href="../pages/about.html" class="nav_son">关于我</a>
+        </div>
+        <div class="suspen">
+            <div class="susitem"><a href="../主页.html" class="sustext itemtop">首页</a></div>
+            <div class="susitem"><a href="../pages/anju.html" class="sustext">杏树</a></div>
+            <div class="susitem"><a href="../pages/program.html" class="sustext">小程序</a></div>
+            <div class="susitem"><a href="../pages/bcg.html" class="sustext">背景</a></div>
+            <div class="susitem"><a href="../pages/alg.html" class="sustext">算法入门</a></div>
+            <div class="susitem"><a href="../pages/about.html" class="sustext itembottom">关于我</a></div>
+        </div>
+
+        <div class="mainpagebcg clearfix">
+            <div class="mainpage clearfix">
+                <a class="passagetitle" href="dfs.html">
+                    <span class="passagetitle">【算法入门】深度优先搜索(DFS)</span></a>
+                <br><br>
+                <br style="color: #606975;">
+                <hr><br>
+                <p style="text-align: center"><span style="font-size: 18pt;color: #606975;"><strong>深度优先搜索(DFS)<br>【算法入门】</strong></span></p>
+                <div class="textarea clearfix">
+                    <p><span style="font-size: 18pt"><strong>1.前言</strong></span>
+                        <br>深度优先搜索（缩写DFS）有点类似广度优先搜索，也是对一个连通图进行遍历的算法。它的思想是
+                        <span style="color: rgba(255, 0, 0, 1)">从一个顶点V0开始，沿着一条路一直走到底，如果发现不能到达目标解，那就返回到上一个节点，然后从另一条路开始走到底
+                        </span> ，这种尽量往深处走的概念即是深度优先的概念。
+                    </p>
+                    <p><strong><span style="font-size: 18pt">2.深度优先搜索VS广度优先搜索</span></strong></p>
+                    <p><span style="font-size: 18pt"><strong>2.1演示深度优先搜索的过程</strong></span>
+                        <br>还是引用上篇文章的样例图，起点仍然是V0，我们修改一下题目意思，只需要让你找出一条V0到V6的道路，而无需最短路。<br><br></p>
+                    <p style="text-align: center"><img src="pic1.png" alt=""></p>
+                    <p style="text-align: center"><span style="color: rgba(51, 102, 255, 1)"><strong>图2-1 寻找V0到V6的一条路（无需最短路径）</strong></span></p>
+                    <p>&nbsp;</p>
+                    <p>假设按照以下的顺序来搜索：</p>
+                    <p>1.V0->V1->V4，此时到底尽头，仍然到不了V6，于是原路返回到V1去搜索其他路径；</p>
+                    <p>2.返回到V1后既搜索V2，于是搜索路径是V0->V1->V2->V6,，找到目标节点，返回有解。</p>
+                    <p>这样搜索只是2步就到达了，但是如果用BFS的话就需要多几步。</p>
+                    <p><strong><span style="font-size: 18pt">2.2深度与广度的比较</span></strong>
+                        <br>（你可以跳过这一节先看第三节，重点在第三节）</p>
+                    <p>从上一篇《【算法入门】广度/宽度优先搜索(BFS)》中知道，我们搜索一个图是按照树的层次来搜索的。</p>
+                    <p>我们假设一个节点衍生出来的相邻节点平均的个数是N个，那么当起点开始搜索的时候，队列有一个节点，当起点拿出来后，把它相邻的节点放进去，那么队列就有N个节点，当下一层的搜索中再加入元素到队列的时候，节点数达到了N2，你可以想想，一旦N是一个比较大的数的时候，这个树的层次又比较深，那这个队列就得需要很大的内存空间了。</p>
+                    <p>于是广度优先搜索的缺点出来了：在树的层次较深&子节点数较多的情况下，消耗内存十分严重。广度优先搜索适用于节点的子节点数量不多，并且树的层次不会太深的情况。</p>
+                    <p>那么深度优先就可以克服这个缺点，因为每次搜的过程，每一层只需维护一个节点。但回过头想想，广度优先能够找到最短路径，那深度优先能否找到呢？深度优先的方法是一条路走到黑，那显然无法知道这条路是不是最短的，所以你还得继续走别的路去判断是否是最短路？</p>
+                    <p>于是深度优先搜索的缺点也出来了：难以寻找最优解，仅仅只能寻找有解。其优点就是内存消耗小，克服了刚刚说的广度优先搜索的缺点。</p>
+                    <p><span style="font-size: 18pt"><strong>3.深度优先搜索</strong></span></p>
+                    <p style="text-align: left"><strong><span style="font-size: 18pt">3.1.举例</span></strong></p>
+                    <p style="text-align: left"><br>给出如图3-1所示的图，求图中的V0出发，是否存在一条路径长度为4的搜索路径。</p>
+                    <p style="text-align: center"><br><img src="pic2.png" alt=""></p>
+                    <p style="text-align: center"><strong><span style="color: rgba(51, 102, 255, 1)">图3-1</span></strong></p>
+                    <p style="text-align: left"><span style="color: rgba(0, 0, 0, 1)"><strong>显然，我们知道是有这样一个解的：V0->V3->V5->V6。</strong></span></p>
+                    <p style="text-align: left">&nbsp;</p>
+                    <h2>3.2.处理过程</h2>
+                    <p>&nbsp;</p>
+                    <p><img src="pic3.png" alt=""></p>
+                    <p><img src="pic4.png" alt=""></p>
+                    <p><img src="pic5.png" alt=""></p>
+                    <p><img src="pic6.png" alt=""></p>
+                    <p><img src="pic7.png" alt=""></p>
+                    <p><img src="pic8.png" alt=""></p>
+                    <p><img src="pic9.png" alt=""></p>
+                    <p><img src="pic10.png" alt=""></p>
+                    <p><img src="pic11.png" alt=""></p>
+                    <p><img src="pic12.png" alt=""></p>
+                    <h2></h2>
+                    <h2>3.3.DFS函数的调用堆栈</h2>
+                    <p><img src="pci13.png" alt=""></p>
+                    <p>此后堆栈调用返回到V0那一层，因为V1那一层也找不到跟V1的相邻未访问节点</p>
+                    <p><img src="pic14.png" alt=""></p>
+                    <p>此后堆栈调用返回到V3那一层</p>
+                    <p><img src="pic15.png" alt=""></p>
+                    <p>此后堆栈调用返回到主函数调用DFS(V0,0)的地方，因为已经找到解，无需再从别的节点去搜别的路径了。</p>
+                    <p></p>
+                    <h1>4.核心代码</h1>
+                    <p>这里先给出DFS的核心代码。</p>
+                    <p></p>
+                    <div class="codearea">
+                        <pre><span style="color: rgba(0, 128, 0, 1)">/*</span><span style="color: rgba(0, 128, 0, 1)">*
+ * DFS核心伪代码
+ * 前置条件是visit数组全部设置成false
+ * @param n 当前开始搜索的节点
+ * @param d 当前到达的深度
+ * @return 是否有解
+ </span><span style="color: rgba(0, 128, 0, 1)">*/</span>
+<span style="color: rgba(0, 0, 255, 1)">bool</span> DFS(Node n, <span style="color: rgba(0, 0, 255, 1)">int</span><span style="color: rgba(0, 0, 0, 1)"> d){
+    </span><span style="color: rgba(0, 0, 255, 1)">if</span> (isEnd(n, d)){<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">一旦搜索深度到达一个结束状态，就返回true</span>
+        <span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(0, 0, 255, 1)">true</span><span style="color: rgba(0, 0, 0, 1)">;
+    }
+ 
+    </span><span style="color: rgba(0, 0, 255, 1)">for</span> (Node nextNode <span style="color: rgba(0, 0, 255, 1)">in</span> n){<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">遍历n相邻的节点nextNode</span>
+        <span style="color: rgba(0, 0, 255, 1)">if</span> (!visit[nextNode]){<span style="color: rgba(0, 128, 0, 1)">//
+</span>            visit[nextNode] = <span style="color: rgba(0, 0, 255, 1)">true</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">在下一步搜索中，nextNode不能再次出现</span>
+            <span style="color: rgba(0, 0, 255, 1)">if</span> (DFS(nextNode, d+<span style="color: rgba(128, 0, 128, 1)">1</span>)){<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">如果搜索出有解
+                </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">做些其他事情，例如记录结果深度等</span>
+                <span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(0, 0, 255, 1)">true</span><span style="color: rgba(0, 0, 0, 1)">;
+            }
+ 
+            </span><span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">重新设置成false，因为它有可能出现在下一次搜索的别的路径中</span>
+            visit[nextNode] = <span style="color: rgba(0, 0, 255, 1)">false</span><span style="color: rgba(0, 0, 0, 1)">;
+        }
+    }
+    </span><span style="color: rgba(0, 0, 255, 1)">return</span> <span style="color: rgba(0, 0, 255, 1)">false</span>;<span style="color: rgba(0, 128, 0, 1)">//</span><span style="color: rgba(0, 128, 0, 1)">本次搜索无解</span>
+}</pre>
+                    </div>
+                    <p>当然了，这里的visit数组不一定是必须的，在一会我给出的24点例子中，我们可以看到这点，这里visit的存在只是为了保证记录节点不被重新访问，也可以有其他方式来表达的，这里只给出核心思想。</p>
+                    <p>深度优先搜索的算法需要你对递归有一定的认识，重要的思想就是：抽象！</p>
+                    <p>可以从DFS函数里边看到，DFS里边永远只处理当前状态节点n，而不去关注它的下一个状态。</p>
+                    <p>它通过把DFS方法抽象，整个逻辑就变得十分的清晰，这就是递归之美。</p>
+                    <p>5.另一个例子：24点</p>
+                    <p>5.1.题目描述<br>想必大家都玩过一个游戏，叫做“24点”：给出4个整数，要求用加减乘除4个运算使其运算结果变成24，4个数字要不重复的用到计算中。</p>
+                    <p>例如给出4个数：1、2、3、4。我可以用以下运算得到结果24：</p>
+                    <p>1*2*3*4 = 24；2*3*4/1 = 24；(1+2+3)*4=24；……</p>
+                    <p>如上，是有很多种组合方式使得他们变成24的，当然也有无法得到结果的4个数，例如：1、1、1、1。</p>
+                    <p>现在我给你这样4个数，你能告诉我它们能够通过一定的运算组合之后变成24吗？这里我给出约束：数字之间的除法中不得出现小数，例如原本我们可以1/4=0.25，但是这里的约束指定了这样操作是不合法的。</p>
+                    <p style="text-align: center">5.2.解法：搜索树<br>这里为了方便叙述，我假设现在只有3个数，只允许加法减法运算。我绘制了如图5-1的搜索树。<br><img src="pic16.png" alt=""></p>
+                    <p></p>
+                    <p></p>
+                    <p style="text-align: center"><span style="color: rgba(0, 0, 255, 1)">图5-1</span></p>
+                    <p>此处只有3个数并且只有加减法，所以第二层的节点最多就6个，如果是给你4个数并且有加减乘除，那么第二层的节点就会比较多了，当延伸到第三层的时候节点数就比较多了，使用BFS的缺点就暴露了，需要很大的空间去维护那个队列。而你看这个搜索树，其实第一层是3个数，到了第二层就变成2个数了，也就是递归深度其实不会超过3层，所以采用DFS来做会更合理，平均效率要比BFS快（我没写代码验证过，读者自行验证）。</p>
+                    <p><span style="font-size: 18pt"><strong>6.OJ题目</strong></span><br>题目分类来自网络：</p>
+                    <p>sicily：1019 1024 1034 1050 1052 1153 1171 1187</p>
+                    <p>pku：1088 1176 1321 1416 1564 1753 2492 3083 3411</p>
+                    <p><strong><span style="font-size: 18pt">7.总结</span></strong></p>
+                    <p><br>DFS适合此类题目：给定初始状态跟目标状态，要求判断从初始状态到目标状态是否有解。</p>
+                    <p></p>
+                    <p><strong><span style="font-size: 18pt">8.扩展</span></strong><br>不知道你注意到没，在深度/广度搜索的过程中，其实相邻节点的加入如果是有一定策略的话，对算法的效率是有很大影响的，你可以做一下简单马周游跟马周游这两个题，你就有所体会，你会发现你在搜索的过程中，用一定策略去访问相邻节点会提升很大的效率。</p>
+                    <p>这些运用到的贪心的思想，你可以再看看启发式搜索的算法，例如A*算法等。</p>
+                    <p>=========================================================</p>
+                    <p>出处：raphealguo@CSDN</p>
+                    <p></p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">本网页是由mxj®一个字一个字敲出来的 ©版权所有</div>
+    </div>
+
+</body>
+
+</html>

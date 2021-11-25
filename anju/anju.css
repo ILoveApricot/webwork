@@ -1,0 +1,242 @@
+.firsttitle {
+    font-size: 40px;
+    text-align: center;
+    color: orange;
+}
+
+.anjupage {
+    width: 1400px;
+    margin: 0px auto;
+    background-image: url(Euk94CRVgAA5JGP.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.anjubox1 {
+    float: left;
+    height: 400px;
+    width: 1200px;
+    margin: 50px 100px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+}
+
+.imgbox1 {
+    float: left;
+    margin: 38px 38px;
+    width: 364px;
+    height: 324px;
+    background-image: url(1560525799464.gif);
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.textbox1 {
+    float: right;
+    height: 324px;
+    width: 700px;
+    margin: 38px 38px 38px 0;
+}
+
+.anjutexttitle {
+    text-align: center;
+}
+
+.introleft {
+    float: left;
+    width: 300px;
+    height: 280px;
+}
+
+.introitem1 {
+    float: left;
+    width: 300px;
+    height: 50px;
+    margin-top: 1px;
+}
+
+.introitem {
+    float: left;
+    width: 300px;
+    height: 25px;
+    margin-top: 1px;
+}
+
+.itemleft {
+    float: left;
+    background-color: rgba(248, 222, 137, .7);
+    text-align: center;
+    height: 25px;
+    width: 80px;
+    line-height: 25px;
+}
+
+.itemleft1 {
+    float: left;
+    background-color: rgba(248, 222, 137, 0.7);
+    text-align: center;
+    height: 50px;
+    width: 80px;
+    line-height: 50px;
+}
+
+.itemright {
+    float: left;
+    text-align: center;
+    width: 220px;
+}
+
+.introright {
+    float: right;
+    width: 400px;
+    color: rgb(26, 26, 26);
+    line-height: 30px;
+}
+
+.anjubox2 {
+    float: left;
+    height: 520px;
+    width: 1200px;
+    margin: 50px 100px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+}
+
+.imgbox2 {
+    float: right;
+    width: 250px;
+    height: 420px;
+    margin: 15px 50px;
+    border: gray solid 2px;
+}
+
+.mask {
+    background-image: url(1B3E9498EE2B07849FB43AC3ACD20846.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 140px;
+    width: 250px;
+}
+
+.kickboxing {
+    background-image: url(EDC16C66417B50813F28DB8C6A43C2CC.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 140px;
+    width: 250px;
+}
+
+.kickmask {
+    background-image: url(23E6B459B452BD3A8B8C68444C90DA12.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 140px;
+    width: 250px;
+}
+
+.textbox2 {
+    float: left;
+    width: 700px;
+    height: 420px;
+    margin: 15px 30px;
+}
+
+.masktext {
+    height: 190px;
+    width: 650px;
+    margin: 10px 23px;
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+.kicktext {
+    height: 190px;
+    width: 650px;
+    margin: 10px 23px;
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+.textheading {
+    text-align: center;
+    font-size: 25px;
+}
+
+.black {
+    background-color: black;
+    color: black;
+}
+
+.black:hover {
+    background-color: rgba(0, 0, 0, .0);
+}
+
+.anjubox3 {
+    float: left;
+    height: 480px;
+    width: 1200px;
+    margin: 50px 100px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+}
+
+.videobox {
+    float: left;
+    height: 320px;
+    width: 480px;
+    margin: 50px;
+    border-radius: 5px;
+}
+
+.fabing {
+    height: 60px;
+    width: 480px;
+}
+
+.newyear {
+    float: left;
+    height: 60px;
+    width: 160px;
+    font-size: 40px;
+}
+
+.byebye {
+    float: left;
+    height: 60px;
+    width: 310px;
+    margin-left: 10px;
+}
+
+.mikan {
+    float: left;
+    height: 160px;
+    width: 500px;
+    margin-top: 35px;
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+.xingbing {
+    float: left;
+    height: 160px;
+    width: 500px;
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+.suspic {
+    position: fixed;
+    top: 300px;
+    left: 50px;
+    width: 200px;
+    height: 120px;
+}
+
+.performance {
+    display: block;
+    width: 200px;
+    height: 120px;
+    background-image: url(989E8528768395D6A6D983862D638A80.gif);
+    background-size: cover;
+    border-radius: 5px;
+}

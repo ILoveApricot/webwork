@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizeeeeee的blog</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" type="image/x-icon" href="../pictures/head.png">
+
+
+</head>
+
+<body>
+    <div class="homepage clearfix">
+        <div class="nav">
+            <a href="../index.html" class="nav_son1">首页</a>
+            <a href="anju.html" class="nav_son">杏树</a>
+            <a href="program.html" class="nav_son">小程序</a>
+            <a href="bcg.html" class="nav_son">背景</a>
+            <a href="alg.html" class="nav_son">算法入门</a>
+            <a href="about.html" class="nav_son">关于我</a>
+        </div>
+        <div class="suspen">
+            <div class="susitem"><a href="../index.html" class="sustext itemtop">首页</a></div>
+            <div class="susitem"><a href="anju.html" class="sustext">杏树</a></div>
+            <div class="susitem"><a href="program.html" class="sustext">小程序</a></div>
+            <div class="susitem"><a href="bcg.html" class="sustext">背景</a></div>
+            <div class="susitem"><a href="alg.html" class="sustext">算法入门</a></div>
+            <div class="susitem"><a href="about.html" class="sustext itembottom">关于我</a></div>
+        </div>
+        <div class="mainpagebcg clearfix">
+            <div class="mainpagebcg clearfix">
+                <div class="piclist">
+                    <img class="pics" src="../pictures/lize.jpg">
+                    <img class="pics" src="../pictures/bcg.jpg">
+                    <img class="pics" src="../pictures/壁纸3.jpeg">
+                    <img class="pics" src="">
+                </div>
+                <script>
+                    var imgs = document.querySelector('.piclist').querySelectorAll('img')
+                    for (var i = 0; i < imgs.length; i++) {
+                        imgs[i].onclick = function() {
+                            document.body.style.backgroundImage = 'url(' + this.src + ')'
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+
+        <div class="footer">本网页是由mxj®一个字一个字敲出来的 ©版权所有</div>
+    </div>
+
+</body>
