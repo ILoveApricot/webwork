@@ -133,11 +133,11 @@
                     </div>
                     <div class="rili clearfix">
                         <div class="rilititle">
-                            关于我
+                            轮播图
                         </div>
                         <br>
-                        <div class="aboutme">
-
+                        <div class="shell" id="shell">
+                            <img src="pictures/pic1.png" alt="" id="img">
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,18 @@
 
         <footer class="footer">本网页是由mxj®一个字一个字敲出来的 ©版权所有</footer>
     </div>
+    <script>
+        var number = 1;
 
+        function fun() {
+            number++;
+            if (number > 3)
+                number = 1;
+            var img = document.getElementById("img");
+            img.src = "pictures/pic" + number + ".png"
+        }
+        setInterval(fun, 1500);
+    </script>
 </body>
 
 </html>

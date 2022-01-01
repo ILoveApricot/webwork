@@ -324,3 +324,14 @@ a {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.shell {
+    margin: 0 10%;
+    width: 80%;
+    height: 12rem;
+    position: relative;
+    background-color: #606975;
+    overflow: hidden;
+    border-radius: .3125rem;
+    border: 5px white solid;
+}
