@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="icon" type="image/x-icon" href="../pictures/head.png">
     <link rel="stylesheet" href="../css/form.css">
-    <script>
-        x = document
-    </script>
+    <script src="../js/add.js"></script>
 
 </head>
 
@@ -49,8 +47,8 @@
                     <div class="selection">
                         <p style="display: inline; margin-left: 50%;">关键字</p>
                         <form style="margin-left: 50%;">
-                            <input type="checkbox" id="check1" onclick="if(this.checked){show1()}else{hide1()}">硬核
-                            <input type="checkbox" id="check2" onclick="if(this.checked){show2()}else{hide2()}">搞笑
+                            <input type="checkbox" id="check1" onclick="hide1()">硬核
+                            <input type="checkbox" id="check2" onclick="hide2()">搞笑
                         </form>
                     </div>
                     <div class="none" id="hardcore">
@@ -67,6 +65,10 @@
                     </div>
                 </div>
 
+                <div class="inputtitle">
+                    <p style="display: inline; margin-left: 25%;">题目</p>
+                    <input type="text">
+                </div>
                 <div class="add_text">
                     <textarea name="text" id="text" cols="30" rows="10" style="width: 100%; height: 100;"></textarea>
                 </div>
@@ -76,23 +78,5 @@
 
         <footer class="footer">本网页是由mxj®一个字一个字敲出来的 ©版权所有</footer>
     </div>
-    <script>
-        function hide1() {
-            document.getElementById("hardcore").setAttribute("class", "none");
-        }
 
-        function show1() {
-            document.getElementById("hardcore").setAttribute("class", "hardcore");
-
-        }
-
-
-        function hide2() {
-            document.getElementById("fun").setAttribute("class", "none");
-        }
-
-        function show2() {
-            document.getElementById("fun").setAttribute("class", "fun");
-        }
-    </script>
 </body>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="icon" type="image/x-icon" href="pictures/head.png">
     <script src="calendar/calendar.js"></script>
-
+    <script src="js/lunbo.js"></script>
 </head>
 
 <body>
@@ -146,18 +146,6 @@
 
         <footer class="footer">本网页是由mxj®一个字一个字敲出来的 ©版权所有</footer>
     </div>
-    <script>
-        var number = 1;
-
-        function fun() {
-            number++;
-            if (number > 3)
-                number = 1;
-            var img = document.getElementById("img");
-            img.src = "pictures/pic" + number + ".png"
-        }
-        setInterval(fun, 1500);
-    </script>
 </body>
 
 </html>
