@@ -47,13 +47,24 @@
                         </form>
                     </div>
                     <div class="selection">
-                        <p style="display: inline; margin-left: 20%;">关键字</p>
-                        <form style="margin-left: 20%;">
-                            <input type="checkbox" name="keyword" value="hardcore">硬核
-                            <input type="checkbox" name="keyword" value="fun">搞笑
+                        <p style="display: inline; margin-left: 50%;">关键字</p>
+                        <form style="margin-left: 50%;">
+                            <input type="checkbox" id="check1" onclick="if(this.checked){show1()}else{hide1()}">硬核
+                            <input type="checkbox" id="check2" onclick="if(this.checked){show2()}else{hide2()}">搞笑
                         </form>
                     </div>
-
+                    <div class="none" id="hardcore">
+                        <form style="margin-left: 20%;">
+                            <input type="checkbox" name="keyword" value="hardcore1">硬核1
+                            <input type="checkbox" name="keyword" value="hardcore2">硬核2
+                        </form>
+                    </div>
+                    <div class="none" id="fun">
+                        <form style="margin-left: 20%;">
+                            <input type="checkbox" name="keyword" value="fun1">搞笑1
+                            <input type="checkbox" name="keyword" value="fun2">搞笑2
+                        </form>
+                    </div>
                 </div>
 
                 <div class="add_text">
@@ -65,5 +76,23 @@
 
         <footer class="footer">本网页是由mxj®一个字一个字敲出来的 ©版权所有</footer>
     </div>
+    <script>
+        function hide1() {
+            document.getElementById("hardcore").setAttribute("class", "none");
+        }
 
+        function show1() {
+            document.getElementById("hardcore").setAttribute("class", "hardcore");
+
+        }
+
+
+        function hide2() {
+            document.getElementById("fun").setAttribute("class", "none");
+        }
+
+        function show2() {
+            document.getElementById("fun").setAttribute("class", "fun");
+        }
+    </script>
 </body>

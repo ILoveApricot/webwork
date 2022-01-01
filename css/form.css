@@ -14,6 +14,24 @@
 .selection {
     margin-top: 2rem;
     float: left;
-    width: 100%;
+    width: 40%;
     height: 2rem;
+}
+
+.hardcore {
+    margin-top: 3rem;
+    float: left;
+    width: 30%;
+    height: 2rem;
+}
+
+.fun {
+    margin-top: 3rem;
+    float: left;
+    width: 30%;
+    height: 2rem;
+}
+
+.none {
+    display: none;
 }
