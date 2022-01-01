@@ -1,5 +1,6 @@
 body {
-    background-image: url(../pictures/lize.jpg);
+    /* background-image: url(../pictures/lize.jpg);  */
+    background-color: #606975;
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;

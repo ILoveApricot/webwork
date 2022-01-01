@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lizeeeeee的blog</title>
+    <title>blog</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="icon" type="image/x-icon" href="../pictures/head.png">
+    <link rel="stylesheet" href="../css/form.css">
     <script>
         x = document
     </script>
@@ -23,7 +24,7 @@
             <a href="program.html" class="nav_son">小程序</a>
             <a href="from.html" class="nav_son">增加文章</a>
             <a href="alg.html" class="nav_son">算法入门</a>
-            <a href="about.html" class="nav_son">关于我</a>
+            <a href="about.html" class="nav_son">使用信息</a>
         </div>
         <div class="suspen">
             <div class="susitem"><a href="../index.html" class="sustext itemtop">首页</a></div>
@@ -31,13 +32,34 @@
             <div class="susitem"><a href="program.html" class="sustext">小程序</a></div>
             <div class="susitem"><a href="from.html" class="sustext">增加文章</a></div>
             <div class="susitem"><a href="alg.html" class="sustext">算法入门</a></div>
-            <div class="susitem"><a href="about.html" class="sustext itembottom">关于我</a></div>
+            <div class="susitem"><a href="about.html" class="sustext itembottom">使用信息</a></div>
         </div>
         <div class="mainpagebcg clearfix">
-            <div class="mainpagebcg clearfix">
-                <div>
+            <div class="mainpage clearfix">
+                <div class="option">
+                    <div class="check">
+                        <p style="margin-left: 20%; display: inline;">发布分区</p>
+                        <form action="" style="margin-left: 20%;">
+                            <select name="type" id="type">
+                                <option value="technology">科技</option>
+                                <option value="routine">日常</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="selection">
+                        <p style="display: inline; margin-left: 20%;">关键字</p>
+                        <form style="margin-left: 20%;">
+                            <input type="checkbox" name="keyword" value="hardcore">硬核
+                            <input type="checkbox" name="keyword" value="fun">搞笑
+                        </form>
+                    </div>
 
                 </div>
+
+                <div class="add_text">
+                    <textarea name="text" id="text" cols="30" rows="10" style="width: 100%; height: 100;"></textarea>
+                </div>
+                <button style="margin: 1em 45%;">提交</button>
             </div>
         </div>
 
