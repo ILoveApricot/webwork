@@ -17,3 +17,15 @@ function hide2() {
         document.getElementById("fun").setAttribute("class", "none");
     }
 }
+
+function checkisnull() {
+    var head = document.getElementById("head");
+    var text = document.getElementById("text");
+    if (head.value.length == 0) {
+        alert("请输入标题");
+    } else if (text.value.length == 0) {
+        alert("请输入文本")
+    } else {
+        alert("发布成功")
+    }
+}
